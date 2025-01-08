@@ -44,27 +44,27 @@ export default function Home() {
   };
 
   return (
-    <div className="container max-w-2xl mx-auto p-5">
+    <div className="container max-w-2xl mx-auto p-5 bg-black text-white min-h-screen">
       <h1 className="py-6 text-center font-bold text-2xl">
         Dream something with{" "}
-        <a href="https://replicate.com/stability-ai/sdxl?utm_source=project&utm_project=getting-started">
-          SDXL
+        <a href="https://replicate.com/gbergman9/daguuuz-flux">
+          daguuuz
         </a>
       </h1>
 
       <form className="w-full flex" onSubmit={handleSubmit}>
         <input
           type="text"
-          className="flex-grow"
+          className="flex-grow bg-gray-800 text-white border border-gray-600 rounded px-2"
           name="prompt"
           placeholder="Enter a prompt to display an image"
         />
-        <button className="button" type="submit">
+        <button className="button bg-white text-black font-bold rounded px-4 py-2 ml-2" type="submit">
           Go!
         </button>
       </form>
 
-      {error && <div>{error}</div>}
+      {error && <div className="mt-4 text-red-500">{error}</div>}
 
       {prediction && (
         <>
